@@ -14,9 +14,9 @@ After downloading the native TensorFlow binary and cuDNN, you can follow these s
 
 ## How to use
 
-The package already includes a pre-trained [MoveNet](https://tfhub.dev/s?q=movenet) .pb file that is loaded when using the `PredictMoveNet` operator. In order to run inference on an incoming image, simply connect a node that provides an `IplImage` type to `PredictMoveNet`. E.g:
+The package already includes a pre-trained [MoveNet](https://tfhub.dev/s?q=movenet) .pb file that is loaded when using the `PredictMoveNet` operator. In order to run inference on an incoming image, connect a node that provides an `IplImage` type to `PredictMoveNet`. The movenet model runs on RGB images so color conversion might be required. E.g:
 
-![WorkflowExample](./docs/images/workflow_example.svg)
+![WorkflowExample](./docs/images/workflow_example.png)
 
 The output of the model (`Pose`) can be indexed using one of the following 17 human `bodypart` keypoints:
 
